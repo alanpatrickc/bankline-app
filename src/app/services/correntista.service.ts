@@ -13,8 +13,7 @@ export class CorrentistaService {
   list(): Observable<any> {
     return this.http.get(`${baseUrl}/correntistas`);
   }
-  // adicionando o método de inclusão (POST) via API
-create(movimentacao:any): Observable<any> {
-  return this.http.post(`${baseUrl}/movimentacoes`,movimentacao);
-}
+  create(correntista:any): Observable<any> {
+    return this.http.post(`${baseUrl}/correntistas`,correntista);
+  }
 }
